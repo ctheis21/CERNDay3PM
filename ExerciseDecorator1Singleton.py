@@ -18,12 +18,12 @@ def singleton(cls):
 class TheOne:
     pass
 
+print(type(TheOne))
 first_one = TheOne()
 another_one = TheOne()
 print(id(first_one))
 print(id(another_one))
 print(first_one is another_one)
-
 
 
 @singleton

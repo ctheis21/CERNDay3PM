@@ -29,16 +29,19 @@ def fibonacci(num):
         return num
     return fibonacci(num - 1) + fibonacci(num - 2)
 
+
 fibonacci(10)
-fibonacci.cache
+print(fibonacci.cache)
 
-
+@cache
 def power(iterable, nb):
     return [e**nb for e in iterable]
 
-res=power((5,6,7), 3)
-print(res, id(res))
-res=power((5,6,8,9), 3)
-print(res, id(res))
-res=power((5,6,7), 3)
-print(res, id(res))
+res1=power((5,6,7), 3)
+print(res1, id(res1))
+res2=power((5,6,8,9), 3)
+print(res2, id(res2))
+res3=power((5,6,7), 3)
+print(res3, id(res3))
+print(power.cache)
+
